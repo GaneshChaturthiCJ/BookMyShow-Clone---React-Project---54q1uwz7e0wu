@@ -1,0 +1,82 @@
+.login-form {
+    margin: 20vh 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: white;
+}
+
+.login-form > input {
+    margin: 10px;
+    width: 20rem;
+    height: 2rem;
+    /* box-shadow: 0 0 8px 4px lightblue; */
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 4px 20px;
+}
+
+
+.login-form > button {
+    margin: 10px;
+    width: 22.8rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    background-color: rgb(44, 125, 196);
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+
+
+.account-check{
+    text-decoration: underline;
+    text-align: end;
+    color: rgb(252, 252, 252);
+    cursor: pointer;
+    margin: 15px;
+}
+
+.login-logo {
+    background-color: blueviolet;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.warning {
+    font-size: 0.8rem;
+    color: rgb(255, 50, 50);
+}
+
+@media only screen and (max-width:768px) {
+    .login-form > input {
+        margin: 10px;
+        width: 18rem;
+    }
+
+    .login-form > button {
+        margin: 10px;
+        width: 19rem;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    .login-form > input {
+        margin: 5px;
+        width: 10rem;
+        height: 1.5rem;
+    }
+
+    .login-form > button {
+        margin: 10px;
+        width: 10rem;
+    }
+}

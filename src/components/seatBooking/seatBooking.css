@@ -1,0 +1,173 @@
+.movieDetails{
+    color: aliceblue;
+}
+
+.bookHeading{
+    color: white;
+
+}
+
+/* css */
+.theater-screen > img {
+    width: 70%;
+    height: 3rem;
+    margin: 2rem 0;
+}
+
+.theater-screen {
+    display: flex;
+    justify-content: center;
+}
+
+.Booking-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.border-class > input {
+    height: 2rem;
+    width: 10rem;
+    outline: none;
+    border: none;
+}
+
+.select-theater {
+    height: 2rem;
+    width: 10rem;
+    color: rgb(0, 0, 0);
+    background-color: rgb(198, 197, 197);
+    border: none;
+    outline: none;
+}
+
+.border-class {
+    border-bottom: 1px solid black;
+}
+
+.heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.btn-seat {
+    cursor: pointer;
+    margin: 30px;
+    width: 12rem;
+    height: 2rem;
+    color: white;
+    background-color: rgb(233, 35, 68);
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-seat:hover {
+    cursor: pointer;
+    margin: 30px;
+    width: 12rem;
+    height: 2rem;
+    background-color: rgb(17, 19, 54);
+    color: rgb(255, 254, 254);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 4px rgb(11, 169, 193);
+}
+
+.seat-row {
+    display: flex;
+    margin: 1px;
+    color: white;
+}
+
+.seats-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seat {
+    /* margin: 5px;
+    border: 1px solid black;
+    padding: 2px;
+    font-size: 0.7rem;
+    width: 20px;
+    height: 15px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer; */
+
+    margin: 10px;
+    border: 1px solid black;
+    padding: 3px;
+    font-size: 0.7rem;
+    width: 30px;
+    height: 24px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+.seat:hover {
+    margin: 5px;
+    border: 2px solid rgb(5, 238, 246);
+    padding: 2px;
+    font-size: 0.7rem;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    box-shadow: 0 0 8px 4px rgb(203, 2, 253);
+}
+
+.seatSelect-on {
+    background-color: rgb(94, 229, 49);
+    color: rgb(0, 0, 0);
+}
+
+.over-ticket {
+    margin: 10px;
+    padding: 10px;
+    width: 10rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (max-width:768px) {
+    .Booking-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+
+    .border-class {
+        border: none;
+    }
+
+    .select-theater {
+        width: 90%;
+    }
+
+    .border-class > input {
+        width: 90%;;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    .seat {
+        margin: 1px;
+        font-size: 0.5rem;
+        width: 18px;
+        height: 18px;
+    }
+
+    .seat:hover {
+        margin: 1px;
+        font-size: 0.5rem;
+        width: 18px;
+        height: 18px;
+    }
+}
