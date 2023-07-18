@@ -42,27 +42,3 @@ const Wishlist = () => {
 
 export default Wishlist;
 
-
-{/* <div className="nowPlaying" >
-<h1 style={{ color:"white",  marginBottom:"10px", marginLeft:"10px", justifyContent: "center" }}>Now Playing</h1>
-<div className="nowPlayingMovieCard" onClick={handleOpen}>
-    {movieList.map((movie) => {
-        return (
-            <div className="movie"  onClick={handleMovieCardClick} >
-                <h5>{movie.original_title}</h5>
-                <img src={"https://image.tmdb.org/t/p/original/" + movie.poster_path } width="250px" height="150px" alt="ImgFailed" />
-                <div className="movieDescription">{movie.overview}</div>
-                <p>Language: {movie.original_language.toUpperCase()}</p>
-                <p>⭐  {movie.vote_average}</p>
-                <span>Movie Id: {movie.id}</span>
-                <span>Release Date: {movie.release_date}</span>
-            </div>
-        )
-    })}
-
-</div>
-<div className='nowPlayingPagination'>
-    <Pagination value={activePage} onChange={setPage} total={10}  />
-    
-</div>
-</div> */}

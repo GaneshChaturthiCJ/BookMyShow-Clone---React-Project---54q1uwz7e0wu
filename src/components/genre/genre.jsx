@@ -5,7 +5,6 @@ import "../../components/nowPlaying/nowPlaying.css";
 import "../../components/nowPlaying/nowPlaying.jsx";
 
 import handleMovieCardClick from "../handleMovieCardClick.jsx";
-import MovieModal from "../nowPlaying/movieModal";
 
 const options = {
   method: "GET",
@@ -18,15 +17,10 @@ const options = {
 
 let genreId = 0;
 
-const Genre = ({ movieList, selectedGenreItem, setSelectedGenreItem }) => {
+const Genre = ({ selectedGenreItem, setSelectedGenreItem }) => {
   const [genre, setGenre] = useState([]);
-  // const [selectedGenreItem, setSelectedGenreItem] = useState([]);
-  // const [genreId,setGenreId] = useState(0);
 
   const handleGenreClick = (event) => {
-    //setMovieList([...movieListBackup])
-
-    //setGenreId(parseInt(event.target.id));
     genreId = parseInt(event.target.id);
     console.log(genreId);
 
@@ -37,28 +31,9 @@ const Genre = ({ movieList, selectedGenreItem, setSelectedGenreItem }) => {
       const res = await resMovie.json();
       setSelectedGenreItem([...res.results]);
     };
-
     fetchMovieByGenre();
 
-    // setSelectedGenreItem([]);
-
-    //console.log(movieList)
-
-    // {
-    //   movieList.map((item) => {
-    //     if (item.genre_ids.includes(genreId)) {
-    //       setSelectedGenreItem([...selectedGenreItem, item]);
-    //     }
-    //     console.log(item);
-    //     console.log(item.genre_ids, "genre id araay");
-    //     console.log(genreId, "selected genre id");
-    //     console.log(item.genre_ids.includes(genreId));
-    //   });
-    // }
-
-    console.log(selectedGenreItem, "final genre item");
-    // setMovieList([...selectedGenreItem])
-    // console.log(movieList)
+    //console.log(selectedGenreItem, "final genre item");
   };
 
   useEffect(() => {

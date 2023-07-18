@@ -2,8 +2,6 @@ import { useState, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-//const API_KEY = 6786787; https://api.themoviedb.org/3/movie/550?api_key=66103917f39fe2fd9c358ea96df71996;
-
 import { MantineProvider, Text } from "@mantine/core";
 import Navigation from "./components/Navigation/Navigation";
 import NowPlaying from "./components/nowPlaying/nowPlaying";
@@ -40,19 +38,19 @@ const App = () => {
     releaseDate: "",
   });
 
+  const modalContextValues = {
+    movieList,
+    modalData,
+    setModalData,
+    // Add other values or functions here
+  };
+
   //state to display values in wishlist page
   const [wishList, setWishList] = useState([]);
   //wishList context modalContextValues
   const wishListValue = {
     wishList,
     setWishList,
-  };
-
-  const modalContextValues = {
-    movieList,
-    modalData,
-    setModalData,
-    // Add other values or functions here
   };
 
   //LogedIn user name context value

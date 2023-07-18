@@ -2,11 +2,7 @@ import React, { useContext, useReducer, useState } from "react";
 import { BsShieldLock } from "react-icons/bs";
 import "../login-signup/signIn-signUp-styles.css";
 import { loggedInUserNameContext } from "../../App";
-//import { reducer, initialData } from "../../utills/reducer.js"
-import { useNavigate } from 'react-router-dom';
-
-
-
+import { useNavigate } from "react-router-dom";
 
 export function UserLoginForm(props) {
   const [userName, setUserName] = useState("");
@@ -16,11 +12,13 @@ export function UserLoginForm(props) {
 
   const navigate = useNavigate();
 
-  const [warningMsg,setWarningMsg] = useState(false)
+  const [warningMsg, setWarningMsg] = useState(false);
   let loginInfo;
 
-//getting value of loggedInUserNameContext 
-const  { loggedInUserName , setLoggedInUserName } = useContext(loggedInUserNameContext);
+  //getting value of loggedInUserNameContext from app.js
+  const { loggedInUserName, setLoggedInUserName } = useContext(
+    loggedInUserNameContext
+  );
 
   loginInfo = JSON.parse(localStorage.getItem("userInfo"));
 
@@ -49,25 +47,25 @@ const  { loggedInUserName , setLoggedInUserName } = useContext(loggedInUserNameC
 
       let data;
       if (
-        loginInfo.some(
-          (info) =>
-          {if((info.userName === storeToLocal.userName) && (info.password === storeToLocal.password)){
+        loginInfo.some((info) => {
+          if (
+            info.userName === storeToLocal.userName &&
+            info.password === storeToLocal.password
+          ) {
             data = info;
             console.log(info.userName, info.password);
             return true;
-          }}
-        )
+          }
+        })
       ) {
-        
         setLoggedInUserName(data.userName);
-        console.log("condition became true", loggedInUserName , "context data")
-        navigate('/');
+        console.log("condition became true", loggedInUserName, "context data");
+        navigate("/");
       } else {
         setWarningMsg(true);
-        return
+        return;
       }
     }
-    //props.functionCall();
   };
 
   const userInputHandler = (e) => {
@@ -83,9 +81,12 @@ const  { loggedInUserName , setLoggedInUserName } = useContext(loggedInUserNameC
       <div className="login-logo">
         <BsShieldLock style={{ fontSize: "2rem" }} />
       </div>
+
       <h3 className="user-heading">Login</h3>
 
-      {warningMsg && <div className="warning">Username or Password Not Matching</div>}
+      {warningMsg && (
+        <div className="warning">Username or Password Not Matching</div>
+      )}
 
       <input
         type="text"
