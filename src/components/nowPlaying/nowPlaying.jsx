@@ -227,7 +227,7 @@ const NowPlaying = ({
                 alt="ImgFailed"
               />
             </div>
-            <div>{modalData.movieDescription}</div>
+            <div className="descreptionMovieModal">{modalData.movieDescription}</div>
             <p>{modalData.language.toUpperCase()}</p>
             <p>{modalData.rating}</p>
             <span>{modalData.movieId}</span>
