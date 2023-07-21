@@ -25,11 +25,11 @@ export function Payment() {
           </div>
         </div>
         <div className="input-fields">
-          <input type="radio" id="Credit-card" />
+          <input type="radio" id="Credit-card" name="card" />
           <label htmlFor="Credit-card">Credit card</label>
-          <input type="radio" id="Debit-card" />
+          <input type="radio" id="Debit-card" name="card" />
           <label htmlFor="Debit-card">Debit card</label>
-          <input type="radio" id="UPI" />
+          <input type="radio" id="UPI" name="card" />
           <label htmlFor="UPI">UPI</label>
         </div>
         <div className="card-details">
@@ -43,7 +43,7 @@ export function Payment() {
           </div>
           <div className="card-name">
             <label htmlFor="cvv">CVV</label>
-            <input className="inputs" id="cvv" type="text" />
+            <input className="inputs" id="cvv" type="text" maxLength={3} />
           </div>
         </div>
         <div className="form-checkout">

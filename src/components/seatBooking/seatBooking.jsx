@@ -5,7 +5,7 @@ import theaterScreen from './theaterScreen.png';
 
 import React from 'react'
 import Navigation from '../Navigation/Navigation';
-import { useScrollIntoView } from '@mantine/hooks';
+//mport { useScrollIntoView } from '@mantine/hooks';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { MyModalContext } from '../../App';

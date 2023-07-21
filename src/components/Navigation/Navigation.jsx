@@ -79,7 +79,6 @@ const Navigation = () => {
             size="md"
             onChange={handleChange}
           />
-          {/* <Button color="gray" size="md" uppercase>Search</Button> */}
         </div>
 
         <div>
@@ -93,10 +92,11 @@ const Navigation = () => {
           {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVduyB0yyafxLCNG4DVmM1Z5FTXcI6uT7JsA&usqp=CAU" width="50px" height="50px"></img> */}
           <Link to="login-signup">
             <Avatar src={null} alt="no image here" />
-            {/* <h5>{(loggedInUserName === "" ? "🙂": loggedInUserName)}</h5> */}
           </Link>
           <h5>
-            {loggedInUserName === "" ? "🤔" : loggedInUserName.toUpperCase()}
+            {loggedInUserName === ""
+              ? "SignUp"
+              : loggedInUserName.toUpperCase()}
           </h5>
         </div>
       </nav>

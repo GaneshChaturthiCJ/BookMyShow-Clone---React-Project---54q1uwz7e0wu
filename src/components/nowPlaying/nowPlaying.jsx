@@ -136,7 +136,6 @@ const NowPlaying = ({
         selectedGenreItem={selectedGenreItem}
         setSelectedGenreItem={setSelectedGenreItem}
       />
-
       {/* conditionally render movies list based on search term */}
       {movieSearch.length === 0 ? (
         ""
@@ -160,7 +159,7 @@ const NowPlaying = ({
                     />
                     <div className="movieDescription">{movie.overview}</div>
                     <p>Language: {movie.original_language.toUpperCase()}</p>
-                    <p>⭐ {movie.vote_average}</p>
+                    <p>⭐ {movie.vote_average}/10</p>
                     <span>Movie Id: {movie.id}</span>
                     <span>Release Date: {movie.release_date}</span>
                   </div>
@@ -170,7 +169,6 @@ const NowPlaying = ({
           </div>
         </>
       )}
-
       {/* now_playing js code */}
       <div className="nowPlaying">
         <h1
@@ -198,7 +196,7 @@ const NowPlaying = ({
                 />
                 <div className="movieDescription">{movie.overview}</div>
                 <p>Language: {movie.original_language.toUpperCase()}</p>
-                <p>⭐ {movie.vote_average}</p>
+                <p>⭐ {movie.vote_average}/10</p>
                 <span>Movie Id: {movie.id}</span>
                 <span>Release Date: {movie.release_date}</span>
               </div>
@@ -209,7 +207,7 @@ const NowPlaying = ({
           <Pagination value={activePage} onChange={setPage} total={10} />
         </div>
       </div>
-
+      ;
       <Modal
         open={open}
         onClose={handleClose}
@@ -227,7 +225,9 @@ const NowPlaying = ({
                 alt="ImgFailed"
               />
             </div>
-            <div className="descreptionMovieModal">{modalData.movieDescription}</div>
+            <div className="descreptionMovieModal">
+              {modalData.movieDescription}
+            </div>
             <p>{modalData.language.toUpperCase()}</p>
             <p>{modalData.rating}</p>
             <span>{modalData.movieId}</span>

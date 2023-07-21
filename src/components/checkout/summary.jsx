@@ -4,7 +4,8 @@ import "../checkout/checkout.css";
 export function Summary(props) {
   const totalTicketPrice =
     Number(props.BookingDetails.price) * Number(props.BookingDetails.noSeats);
-  const tax =  (totalTicketPrice * 0.0175).toFixed(2);
+  const tax = (totalTicketPrice * 0.0175).toFixed(2);
+
   return (
     <div className="summary-slip">
       <div className="wraper-div">

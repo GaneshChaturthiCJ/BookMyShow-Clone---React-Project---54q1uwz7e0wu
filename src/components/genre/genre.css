@@ -16,8 +16,11 @@
 
 */ .genre {
     width: 100%;
+    height: 100px;
     overflow-x: scroll;
     white-space: nowrap;
+    display: flex;
+        align-items: center;
     /* Keeps buttons in a single line */
 }
 /* genre buttons css start */

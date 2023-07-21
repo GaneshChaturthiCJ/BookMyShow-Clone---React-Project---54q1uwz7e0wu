@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useState } from "react";
+import React, { useContext, useState } from "react";
 import { BsShieldLock } from "react-icons/bs";
 import "../login-signup/signIn-signUp-styles.css";
 import { loggedInUserNameContext } from "../../App";
@@ -20,6 +20,7 @@ export function UserLoginForm(props) {
     loggedInUserNameContext
   );
 
+  //getting login info from local storage
   loginInfo = JSON.parse(localStorage.getItem("userInfo"));
 
   const submitHandler = (e) => {

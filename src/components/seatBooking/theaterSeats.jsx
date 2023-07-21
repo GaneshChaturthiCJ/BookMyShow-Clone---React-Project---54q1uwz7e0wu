@@ -76,24 +76,27 @@ export function TheaterSeats(props) {
 
   return (
     <>
-    <div className="seats-grid">
-      <div className="seat-row">{seatsSection(props.Seats, 0)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 1)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 2)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 3)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 4)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 5)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 6)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 7)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 8)}</div>
-      <div className="seat-row">{seatsSection(props.Seats, 9)}</div>
-      {/* <NavLink to="/checkout"> */}
-      <button className="btn-seat" onClick={submitSeatSelected}>Proceed For Payment</button>
-
+      <div className="seats-grid">
+        <div className="seat-row">{seatsSection(props.Seats, 0)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 1)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 2)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 3)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 4)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 5)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 6)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 7)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 8)}</div>
+        <div className="seat-row">{seatsSection(props.Seats, 9)}</div>
+        {/* <NavLink to="/checkout"> */}
+        <button className="btn-seat" onClick={submitSeatSelected}>
+          Proceed For Payment
+        </button>
       </div>
-      {flag && <Overlay functionCall={overlayFlagCheck}>
-        <h4 className="over-ticket">Please Fill in all details to Book</h4>
-      </Overlay>}
+      {flag && (
+        <Overlay functionCall={overlayFlagCheck}>
+          <h4 className="over-ticket">Please Fill in all details to Book</h4>
+        </Overlay>
+      )}
     </>
   );
 }

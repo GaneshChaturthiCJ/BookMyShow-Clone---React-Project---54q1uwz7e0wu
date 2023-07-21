@@ -3,12 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import { MantineProvider, Text } from "@mantine/core";
-import Navigation from "./components/Navigation/Navigation";
+//import Navigation from "./components/Navigation/Navigation";
 import NowPlaying from "./components/nowPlaying/nowPlaying";
-import Genre from "./components/genre/genre";
+//import Genre from "./components/genre/genre";
 import BasicModal from "./components/basicModal";
 import Wishlist from "./components/wishlist/wishlist";
-import { UserSignUpForm } from "./components/login-signup/signUp";
+//import { UserSignUpForm } from "./components/login-signup/signUp";
 import SeatBooking from "./components/seatBooking/seatBooking";
 import Checkout from "./components/checkout/checkout";
 import UserInfo from "./components/login-signup/userInfo";
